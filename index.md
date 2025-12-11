@@ -43,8 +43,7 @@ Ejemplos:
 ---
 
 ## Empezar
-- [Lección : Saludos
-- [Lección 2: Presentaciones](le crea este archivo cuando estés listo -->
+- [Lección 1: Saludos](lecciones/001-saludos]
 
 ---
 
