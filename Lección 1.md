@@ -1,9 +1,7 @@
 
 ---
 title: Lección 1 — Saludos
-duracion: 8–11 min
-nivel: principiante
-idiomas: [es, en, pt-BR]
+permalink: /lecciones/001-saludos/
 ---
 
 # Lección 1: Saludos
@@ -23,10 +21,3 @@ idiomas: [es, en, pt-BR]
 ## Diálogo corto
 **A:** Imanalla, ñaño.  
 **B:** Alli punlla, ¿imanalla kanki?
-
-## Video de YouTube
-<iframe width="560" height="315"
-  src="https://www.youtube.com/embed/VIDEO_ID"
-  title="Lección 1: Saludos"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
