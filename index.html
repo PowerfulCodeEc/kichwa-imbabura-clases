@@ -13,29 +13,25 @@
   <meta property="og:title" content="Curso de Kichwa (Quichua) — Introducción" />
   <meta property="og:description" content="Aprende Kichwa (Quichua) de Imbabura con un enfoque práctico. Menú de lecciones y video." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://your-domain/og-image.jpg" />
-  <meta property="og:url" content="https://your-domain/" />
+  <!-- Reemplaza estos dos valores por tu dominio de GitHub Pages si quieres que se vea bien al compartir -->
+  <meta property="og:image" content="https://tu-dominio/og-image.jpg" />
+  <meta property="og:url" content="https://tu-dominio/" />
 
   <!-- ========= ESTILOS MINIMALISTAS ========= -->
   <style>
     :root {
-      /* Paleta sobria y moderna */
       --bg: #0f1216;
       --bg-soft: #151a21;
       --text: #e9edf3;
       --muted: #aeb8c5;
-      --primary: #4ad2a7;     /* verde-agua sutil */
-      --accent: #7aa6ff;      /* azul sutil */
+      --primary: #4ad2a7;
+      --accent: #7aa6ff;
       --card: #11151b;
       --border: #232b36;
       --shadow: 0 10px 30px rgba(0,0,0,0.3);
       --radius: 14px;
-
-      /* Tipografía del sistema (rápida, sin descargas) */
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
-
-    /* Modo claro automático si el usuario lo prefiere */
     @media (prefers-color-scheme: light) {
       :root {
         --bg: #f7f9fc;
@@ -47,112 +43,63 @@
         --shadow: 0 10px 30px rgba(0,0,0,0.06);
       }
     }
-
     html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font);
-      line-height: 1.6;
+      margin: 0; padding: 0;
+      background: var(--bg); color: var(--text);
+      font-family: var(--font); line-height: 1.6;
     }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 24px;
-    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
 
     header {
-      position: sticky;
-      top: 0;
+      position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(8px);
       background: color-mix(in oklab, var(--bg) 80%, transparent);
       border-bottom: 1px solid var(--border);
-      z-index: 50;
     }
-
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 700; letter-spacing: 0.2px;
     }
     .brand .logo {
-      width: 36px; height: 36px;
-      border-radius: 8px;
+      width: 36px; height: 36px; border-radius: 8px;
       background: linear-gradient(135deg, var(--primary), var(--accent));
       box-shadow: var(--shadow);
     }
-
-    nav {
-      margin-top: 12px;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+    nav { margin-top: 12px; display: flex; gap: 14px; flex-wrap: wrap; }
     nav a {
-      color: var(--text);
-      text-decoration: none;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      font-size: 0.95rem;
+      color: var(--text); text-decoration: none;
+      padding: 8px 12px; border: 1px solid var(--border);
+      border-radius: 999px; font-size: 0.95rem;
     }
     nav a:hover { border-color: var(--accent); color: var(--accent); }
 
     .hero {
-      margin: 28px 0;
-      padding: 28px;
-      border: 1px solid var(--border);
-      background: var(--bg-soft);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      margin: 28px 0; padding: 28px;
+      border: 1px solid var(--border); background: var(--bg-soft);
+      border-radius: var(--radius); box-shadow: var(--shadow);
     }
-    .hero h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
-    }
+    .hero h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.2rem); }
     .hero p { color: var(--muted); margin: 0; }
 
     section {
-      margin: 28px 0;
-      padding: 24px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      margin: 28px 0; padding: 24px;
+      border: 1px solid var(--border); background: var(--card);
+      border-radius: var(--radius); box-shadow: var(--shadow);
     }
-    section h2 {
-      margin-top: 0;
-      font-size: clamp(1.3rem, 3vw, 1.6rem);
-    }
+    section h2 { margin-top: 0; font-size: clamp(1.3rem, 3vw, 1.6rem); }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    @media (min-width: 680px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 960px) {
-      .grid { grid-template-columns: repeat(3, 1fr); }
-    }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 680px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 960px) { .grid { grid-template-columns: repeat(3, 1fr); } }
 
     .card {
-      padding: 18px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--bg-soft);
+      padding: 18px; border: 1px solid var(--border);
+      border-radius: 12px; background: var(--bg-soft);
     }
     .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
     .card p { margin: 0; color: var(--muted); }
     .card a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
+      display: inline-block; margin-top: 10px; text-decoration: none;
       color: var(--primary);
       border-bottom: 1px dashed color-mix(in oklab, var(--primary) 70%, transparent);
     }
@@ -162,41 +109,29 @@
       border-left: 4px solid var(--primary);
       padding: 12px 14px;
       background: color-mix(in oklab, var(--card) 80%, transparent);
-      border-radius: 10px;
-      color: var(--text);
+      border-radius: 10px; color: var(--text);
     }
 
     details {
       border: 1px dashed var(--border);
-      padding: 12px 14px;
-      border-radius: 10px;
+      padding: 12px 14px; border-radius: 10px;
       background: color-mix(in oklab, var(--card) 80%, transparent);
     }
-    details > summary {
-      cursor: pointer;
-      font-weight: 600;
-      color: var(--accent);
-    }
+    details > summary { cursor: pointer; font-weight: 600; color: var(--accent); }
 
     .video {
-      aspect-ratio: 16 / 9;
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: #000;
+      aspect-ratio: 16 / 9; width: 100%;
+      border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; background: #000;
     }
     .video iframe { width: 100%; height: 100%; border: 0; }
 
     footer {
-      margin-top: 32px;
-      padding: 24px;
+      margin-top: 32px; padding: 24px;
       border-top: 1px solid var(--border);
-      color: var(--muted);
-      text-align: center;
+      color: var(--muted); text-align: center;
     }
 
-    /* Enlaces internos suaves */
     html { scroll-behavior: smooth; }
   </style>
 </head>
@@ -211,7 +146,7 @@
       <nav aria-label="Navegación principal">
         #introduccionIntroducción</a>
         #que-aprenderasQué aprenderás</a>
-        <a href="#menu-lenú de lecciones</a>
+        #menu-leccionesMenú de lecciones</a>
         #recursosRecursos y tips</a>
         #videoVideo</a>
       </nav>
@@ -225,7 +160,7 @@
       <p>Dialecto de Imbabura · Enfoque práctico · Aprendizaje claro y accesible</p>
     </section>
 
-    <!-- ========= INTRODUCCIÓN (texto organizado de tu guion) ========= -->
+    <!-- ========= INTRODUCCIÓN ========= -->
     <section id="introduccion" aria-labelledby="intro-title">
       <h2 id="intro-title">Bienvenida e Introducción</h2>
 
@@ -286,7 +221,7 @@
       </div>
     </section>
 
-    <!-- ========= MENÚ DE LECCIONES (enlaces que podrás reemplazar) ========= -->
+    <!-- ========= MENÚ DE LECCIONES ========= -->
     <section id="menu-lecciones" aria-labelledby="menu-title">
       <h2 id="menu-title">Menú de próximas lecciones</h2>
       <p>Estas tarjetas son enlaces de ejemplo. Cuando publiques cada lección en GitHub (por ejemplo <code>leccion-1.html</code>), reemplaza el <code>href</code> con la URL real.</p>
@@ -305,12 +240,14 @@
         <div class="card">
           <h3>Lección 3 — Verbos regulares: estructura</h3>
           <p>Raíz y terminaciones; patrón universal.</p>
-          <a href="#"ión</a>
+          #Abrir lección</a>
         </div>
         <div class="card">
           <h3>Lección 4 — Partículas esenciales</h3>
           <p>Cómo añadir significado y función a las palabras.</p>
-          <a href="#" aria-label="Ir a la Lección   <div class="card">
+          #Abrir lección</a>
+        </div>
+        <div class="card">
           <h3>Lección 5 — Vocabulario cotidiano I</h3>
           <p>Familia, casa, comida: palabras de uso diario.</p>
           #Abrir lección</a>
@@ -351,15 +288,23 @@
     <!-- ========= VIDEO DE YOUTUBE ========= -->
     <section id="video" aria-labelledby="video-title">
       <h2 id="video-title">Video de la introducción</h2>
-      <p>Si el enlace de tu video es <code>https://www.youtube.com/watch?v=abc123XYZ</code>, el <em>ID</em> es <code>abc123XYZ</code>. Sustituye <code>VIDEO_ID</code> en el código de abajo.</p>
+      <p>Video incrustado desde tu enlace: <code>https://www.youtube.com/watch?v=mcN2N7NOD6s</code>.</p>
 
       <div class="video" role="figure" aria-label="Video de YouTube de la introducción">
-        <!-- Reemplaza VIDEO_ID por el ID real de tu video -->
+        <!-- Opción estándar -->
         <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
+          src="https://www.youtube.com/embed/mcN2N7NOD6s"
           title="Introducción al curso de Kichwa (Quichua)"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allow      </noscript>
+          allowfullscreen
+         bel="Video de YouTube (modo privacidad)">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/mcN2N7NOD6s"
+          title="Introducción al curso de Kichwa (Quichua)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+>
+      </noscript>
     </section>
   </div>
 
